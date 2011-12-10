@@ -29,7 +29,7 @@ Bashdb can be used with ddd: ddd --debugger %{_bindir}/%{name} <script-name>.
 %post
 install-info %{_infodir}/%{name}.info.gz %{_infodir}/dir
 
-%postun
+%preun
 if [ "$1" = 0 ]; then
    install-info --delete %{_infodir}/%{name}.info.gz %{_infodir}/dir
 fi
