@@ -26,11 +26,11 @@ The 4.0 series is a complete rewrite of the previous series.
 Bashdb can be used with ddd: ddd --debugger %{_bindir}/%{name} <script-name>.
 
 %post
-/sbin/install-info %{_infodir}/%{name}.info.* %{_infodir}
+%_install_info %{name}.info
 
 %preun
 if [ "$1" = 0 ]; then
-   /sbin/install-info --delete %{_infodir}/%{name}.info.* %{_infodir}
+   %_remove_install_info %{name}.info
 fi
 
 %files
@@ -51,5 +51,3 @@ fi
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-rm -f %{buildroot}%{_infodir}
-
