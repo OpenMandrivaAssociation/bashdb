@@ -4,11 +4,10 @@ Name:           bashdb
 Summary:        BASH debugger, the BASH symbolic debugger
 Group:          Development/Other
 Version:        4.2_0.8
-Release:        1
+Release:        2
 License:        GPLv2+
 Url:            http://bashdb.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
-
 BuildRequires:  bash
 Requires(post): info-install
 Requires(preun):info-install
@@ -27,11 +26,11 @@ The 4.0 series is a complete rewrite of the previous series.
 Bashdb can be used with ddd: ddd --debugger %{_bindir}/%{name} <script-name>.
 
 %post
-install-info %{_infodir}/%{name}.info.gz %{_infodir}/dir
+/sbin/install-info %{_infodir}/%{name}.info.* %{_infodir}
 
 %preun
 if [ "$1" = 0 ]; then
-   install-info --delete %{_infodir}/%{name}.info.gz %{_infodir}/dir
+   /sbin/install-info --delete %{_infodir}/%{name}.info.* %{_infodir}
 fi
 
 %files
@@ -39,7 +38,7 @@ fi
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_mandir}/man1/%{name}.1*
-%{_infodir}/%{name}.info*
+%{_infodir}/%{name}.info.*
 
 
 %prep
@@ -52,6 +51,5 @@ fi
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-rm -f %{buildroot}%{_infodir}/dir
-
+rm -f %{buildroot}%{_infodir}
 
