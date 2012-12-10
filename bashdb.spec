@@ -40,3 +40,23 @@ Bashdb can be used with ddd: ddd --debugger %{_bindir}/%{name} <script-name>.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+
+
+%changelog
+* Sat Jun 02 2012 Andrey Bondrov <abondrov@mandriva.org> 4.2_0.8-3
++ Revision: 801970
+- Drop some legacy junk
+
+* Sun Dec 11 2011 Zé <ze@mandriva.org> 4.2_0.8-2
++ Revision: 740290
+- use macros
+- fix scriptlets
+- change to preun
+
+* Sat Dec 10 2011 Zé <ze@mandriva.org> 4.2_0.8-1
++ Revision: 740136
+- imported package bashdb
+
+
+* Sat Dec 10 2011 Zé <ze@mandriva.org> 4.2_0.8-1.mde
+- first packaget package
