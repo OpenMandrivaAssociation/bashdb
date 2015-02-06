@@ -3,7 +3,7 @@
 Summary:	BASH debugger, the BASH symbolic debugger
 Name:		bashdb
 Version:	4.2_0.8
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://bashdb.sourceforge.net/
