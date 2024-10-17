@@ -6,7 +6,7 @@ Version:	4.2_0.8
 Release:	5
 License:	GPLv2+
 Group:		Development/Other
-Url:		http://bashdb.sourceforge.net/
+Url:		https://bashdb.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
 BuildRequires:	bash
 Requires:	bash
