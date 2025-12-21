@@ -8,6 +8,11 @@ License:	GPLv2+
 Group:		Development/Other
 Url:		https://bashdb.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	bash
 Requires:	bash
 BuildArch:	noarch
